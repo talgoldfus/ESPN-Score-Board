@@ -3,6 +3,8 @@ import {connect} from 'react-redux'
 import filterEvents from '../actions/filterEvents'
 import LiveGame from '../components/LiveGame'
 import FinalGame from '../components/FinalGame'
+import ScheduledGame from '../components/ScheduledGame'
+
 
 
 class Gameboard extends Component {
@@ -20,8 +22,16 @@ class Gameboard extends Component {
     const {scheduled,live,final} = this.props.display
     var events;
     if(scheduled){
-      events =scheduled.map(event => <h1>scheduled event {event.id}</h1>) }
-      else{
+      events =scheduled.map(event =>{
+        let game = event.competitions[0]
+        return (
+          <ScheduledGame
+            statusDetail={game.status.detail}
+            homeTeam={game.competitors[0]}
+            awayTeam={game.competitors[1]}
+            key={event.id}
+          />)}) }
+    else{
         events =live.map(event=>{
           let game = event.competitions[0]
           return (
@@ -30,6 +40,7 @@ class Gameboard extends Component {
               homeTeam={game.competitors[0]}
               awayTeam={game.competitors[1]}
               situation={game.situation}
+              key={event.id}
             />)}).concat(
             final.map(event=>{
               let game = event.competitions[0]
@@ -38,14 +49,14 @@ class Gameboard extends Component {
                   statusDetail={game.status.detail}
                   homeTeam={game.competitors[0]}
                   awayTeam={game.competitors[1]}
+                  key={event.id}
                 />)})
-        )
+            )
       }
 
     return (
-      <div className="container-fluid mainContainer">
-        <div className="row">
-          <div className="selectors col-md-2">
+      <div className="mainContainer">
+          <span className="selectors">
             <div>
               <button type="button" className="Today" onClick={()=>this.handleCilck("TODAY")}>
               Today
@@ -56,13 +67,10 @@ class Gameboard extends Component {
                 Scheduled
               </button>
             </div>
-          </div>
-          <div className="events col-md-10">
-              <div className="row">
+          </span>
+          <span className="events">
                 {events}
-              </div>
-          </div>
-        </div>
+          </span>
       </div>
     );
   }
@@ -73,3 +81,26 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps,{filterEvents})(Gameboard)
+
+//
+// <div className="container mainContainer">
+//   <div className="row">
+//     <div className="selectors col-md-2">
+//       <div>
+//         <button type="button" className="Today" onClick={()=>this.handleCilck("TODAY")}>
+//         Today
+//         </button>
+//       </div>
+//       <div>
+//         <button type="button" className="Scheduled" onClick={()=>this.handleCilck("SCHEDULED")}>
+//           Scheduled
+//         </button>
+//       </div>
+//     </div>
+//     <div className="events col-md-10">
+//         <div className="row">
+//           {events}
+//         </div>
+//     </div>
+//   </div>
+// </div>

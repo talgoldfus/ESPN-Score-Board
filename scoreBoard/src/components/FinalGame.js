@@ -13,13 +13,19 @@ class FinalGame extends Component {
   render() {
 
     return (
-      <div className="FinalGame col-md-4">
-         <div className="row statusDetail">
+      <div className="FinalGame">
+         <div className="statusDetail">
               <p>{this.props.statusDetail}</p>
           </div>
-          <div className="row gameStats">
-              <p>{this.props.homeTeam.team.abbreviation}: {this.props.homeTeam.score}</p>
-              <p>{this.props.awayTeam.team.abbreviation}: {this.props.awayTeam.score}</p>
+          <div className="gameStats">
+            <div className="teams">
+              <p>{this.props.homeTeam.team.abbreviation}</p>
+              <p>{this.props.awayTeam.team.abbreviation}</p>
+            </div>
+            <div className="scores">
+              <p>{this.props.homeTeam.score}</p>
+              <p>{this.props.awayTeam.score}</p>
+            </div>
           </div>
       </div>
     )

@@ -1,12 +1,74 @@
-@import './assets/bs-grid.css';
-
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
 }
 
+p{
+  font-size: 12px;
+  font-weight: 600;
+}
+
 .mainContainer{
   width:970px;
   height: 66px;
+}
+
+.selectors{
+  float: left;
+  width: 10%;
+  background-color: aqua;
+  padding: 0;
+  height: inherit;
+}
+
+.events{
+  float: left;
+  width: 90%;
+  background-color: aquamarine;
+  padding: 0;
+  height: inherit;
+  overflow: hidden;
+}
+
+.LiveGame ,.FinalGame,.ScheduledGame{
+  float: left;
+  clear: right;
+  width: 25%;
+  height: inherit;
+  border-left: solid 1px black;
+}
+
+.teams,.scores,.stats{
+  float: left;
+  padding-right: 10px;
+}
+
+.gameStats,.statusDetail{
+  padding-left: 10px;
+}
+
+.gameStats{
+  bottom: 5px;
+  position: relative;
+}
+
+.statusDetail{
+  height: 0;
+  margin-bottom: 4px;
+}
+
+.statusDetail p{
+  font-size: 11px;
+  font-weight: bold;
+  position: relative;
+  bottom: 7px;
+}
+
+.teams{
+
+}
+
+.LiveGame .statusDetail p{
+  color: red;
 }

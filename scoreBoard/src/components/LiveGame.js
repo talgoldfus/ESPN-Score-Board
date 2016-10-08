@@ -24,20 +24,22 @@ class LiveGame extends Component {
   render() {
 
     return (
-      <div className="LiveGame col-md-4">
-         <div className="row statusDetail">
-            <div className="col-md-12">
+      <div className="LiveGame">
+         <div className="statusDetail">
               <p>{this.props.statusDetail}</p>
-            </div>
           </div>
-          <div className="row gameStats">
-            <div className="col-md-6 teams">
-              <p>{this.props.homeTeam.team.abbreviation}: {this.props.homeTeam.score}</p>
-              <p>{this.props.awayTeam.team.abbreviation}: {this.props.awayTeam.score}</p>
+          <div className="gameStats">
+            <div className="teams">
+              <p>{this.props.homeTeam.team.abbreviation}</p>
+              <p>{this.props.awayTeam.team.abbreviation}</p>
             </div>
-            <div className="col-md-6 stats">
+            <div className="scores">
+              <p>{this.props.homeTeam.score}</p>
+              <p>{this.props.awayTeam.score}</p>
+            </div>
+            <div className="stats">
               <p>Base: {this.calculateBase()}</p>
-              <p>Outs: {this.props.situation.outs}</p>
+              <p>{this.props.situation.outs} Outs</p>
             </div>
           </div>
       </div>
