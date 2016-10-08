@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux'
 import filterEvents from '../actions/filterEvents'
 import LiveGame from '../components/LiveGame'
+import FinalGame from '../components/FinalGame'
 
 
 class Gameboard extends Component {
@@ -30,7 +31,14 @@ class Gameboard extends Component {
               awayTeam={game.competitors[1]}
               situation={game.situation}
             />)}).concat(
-            final.map(event=> null)
+            final.map(event=>{
+              let game = event.competitions[0]
+              return (
+                <FinalGame
+                  statusDetail={game.status.detail}
+                  homeTeam={game.competitors[0]}
+                  awayTeam={game.competitors[1]}
+                />)})
         )
       }
 
