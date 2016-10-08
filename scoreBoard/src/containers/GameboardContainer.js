@@ -26,20 +26,22 @@ class Gameboard extends Component {
 
     return (
       <div className="mainContainer">
-        <div className="selectors">
-          <div>
-            <button type="button" className="Today" onClick={()=>this.handleCilck("TODAY")}>
-            Today
-            </button>
+        <div className="row">
+          <div className="selectors col-md-1">
+            <div>
+              <button type="button" className="Today" onClick={()=>this.handleCilck("TODAY")}>
+              Today
+              </button>
+            </div>
+            <div>
+              <button type="button" className="Scheduled" onClick={()=>this.handleCilck("SCHEDULED")}>
+                Scheduled
+              </button>
+            </div>
           </div>
-          <div>
-            <button type="button" className="Scheduled" onClick={()=>this.handleCilck("SCHEDULED")}>
-              Scheduled
-            </button>
+          <div className="events col-md-11">
+            {events}
           </div>
-        </div>
-        <div className="events">
-          {events}
         </div>
       </div>
     );
