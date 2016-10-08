@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux'
 import filterEvents from '../actions/filterEvents'
+import LiveGame from '../components/LiveGame'
+
 
 class Gameboard extends Component {
 
@@ -19,15 +21,23 @@ class Gameboard extends Component {
     if(scheduled){
       events =scheduled.map(event => <h1>scheduled event {event.id}</h1>) }
       else{
-        events =live.map(event=> <h1>live event {event.id}</h1>).concat(
-        final.map(event=> <h1>final event {event.id}</h1>)
+        events =live.map(event=>{
+          let game = event.competitions[0]
+          return (
+            <LiveGame
+              statusDetail={game.status.detail}
+              homeTeam={game.competitors[0]}
+              awayTeam={game.competitors[1]}
+              situation={game.situation}
+            />)}).concat(
+            final.map(event=> null)
         )
       }
 
     return (
-      <div className="mainContainer">
+      <div className="container-fluid mainContainer">
         <div className="row">
-          <div className="selectors col-md-1">
+          <div className="selectors col-md-2">
             <div>
               <button type="button" className="Today" onClick={()=>this.handleCilck("TODAY")}>
               Today
@@ -39,8 +49,10 @@ class Gameboard extends Component {
               </button>
             </div>
           </div>
-          <div className="events col-md-11">
-            {events}
+          <div className="events col-md-10">
+              <div className="row">
+                {events}
+              </div>
           </div>
         </div>
       </div>
