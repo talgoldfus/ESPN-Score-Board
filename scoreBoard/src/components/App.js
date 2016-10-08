@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
+import GameBoard from '../containers/GameboardContainer'
 
-class App extends Component {
-  render() {
+const App = (props)=> {
     return (
       <div className="App">
+        <GameBoard />
       </div>
     );
-  }
 }
 
 export default App;
