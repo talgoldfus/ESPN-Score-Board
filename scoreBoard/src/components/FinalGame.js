@@ -1,19 +1,25 @@
 import React, { Component } from 'react';
+import FinalGameLink from './FinalGameLink'
 
 class FinalGame extends Component {
 
   constructor(props){
     super(props)
     this.state ={hover:false}
-    this.handleHover = this.handleHover.bind(this)
+    this.onMouseEnter = this.onMouseEnter.bind(this)
+    this.handleLeave = this.handleLeave.bind(this)
   }
 
-  handleHover(){
-    this.setState({hover: !this.state.hover})
+  handleLeave(){
+    this.setState({hover: false})
+  }
+
+  onMouseEnter(){
+    this.setState({hover: true})
   }
 
   render() {
-    const summary = <h1>TEST</h1>
+    const summary = (<FinalGameLink link={this.props.links.web.recap} gameID={this.props.eventID} />)
     const details =
     (<div>
         <div className="statusDetail">
@@ -32,7 +38,7 @@ class FinalGame extends Component {
      </div>)
 
     return (
-      <div className="FinalGame" onMouseEnter={()=>this.handleHover()} onMouseLeave={()=>this.handleHover()}>
+      <div className="FinalGame" onMouseEnter={()=>this.onMouseEnter()} onMouseLeave={()=>this.handleLeave()}>
          {this.state.hover ? summary : details}
       </div>
     )

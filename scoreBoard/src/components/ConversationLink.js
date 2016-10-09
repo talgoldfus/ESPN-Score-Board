@@ -1,7 +1,6 @@
 import React from 'react';
 
 const ConversationLink = (props)=> {
-    debugger
     return (
       <div className="ConversationLink">
         <a href={props.link.href}>

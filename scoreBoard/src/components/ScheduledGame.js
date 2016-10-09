@@ -19,7 +19,6 @@ class ScheduledGame extends Component {
     this.setState({hover: true})
   }
 
-
   render() {
     const gameDate = moment(this.props.statusDetail).format('ddd - LT')
     const conversation = (<ConversationLink link={this.props.links.web.conversation} />)

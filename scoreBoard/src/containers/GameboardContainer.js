@@ -41,6 +41,8 @@ class Gameboard extends Component {
               homeTeam={game.competitors[0]}
               awayTeam={game.competitors[1]}
               situation={game.situation}
+              links={event.links}
+              eventID={event.id.toString()}
               key={event.id.toString()}
             />)}).concat(
             final.map(event=>{
@@ -50,6 +52,8 @@ class Gameboard extends Component {
                   statusDetail={game.status.detail}
                   homeTeam={game.competitors[0]}
                   awayTeam={game.competitors[1]}
+                  links={event.links}
+                  eventID={event.id.toString()}
                   key={event.id.toString()}
                 />)})
             )
