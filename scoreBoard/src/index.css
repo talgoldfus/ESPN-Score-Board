@@ -1,4 +1,6 @@
 @import "./assets/base.css";
+@import "./assets/fullLiveGameStats.css";
+
 
 body {
   margin: 0;
@@ -69,9 +71,6 @@ p{
   bottom: 7px;
 }
 
-.teams{
-
-}
 
 .LiveGame .statusDetail p{
   color: red;
