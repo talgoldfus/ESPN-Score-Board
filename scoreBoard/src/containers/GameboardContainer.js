@@ -29,7 +29,8 @@ class Gameboard extends Component {
             statusDetail={game.status.detail}
             homeTeam={game.competitors[0]}
             awayTeam={game.competitors[1]}
-            key={event.id}
+            links={event.links}
+            key={event.id.toString()}
           />)}) }
     else{
         events =live.map(event=>{
@@ -40,7 +41,7 @@ class Gameboard extends Component {
               homeTeam={game.competitors[0]}
               awayTeam={game.competitors[1]}
               situation={game.situation}
-              key={event.id}
+              key={event.id.toString()}
             />)}).concat(
             final.map(event=>{
               let game = event.competitions[0]
@@ -49,7 +50,7 @@ class Gameboard extends Component {
                   statusDetail={game.status.detail}
                   homeTeam={game.competitors[0]}
                   awayTeam={game.competitors[1]}
-                  key={event.id}
+                  key={event.id.toString()}
                 />)})
             )
       }
@@ -81,26 +82,3 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps,{filterEvents})(Gameboard)
-
-//
-// <div className="container mainContainer">
-//   <div className="row">
-//     <div className="selectors col-md-2">
-//       <div>
-//         <button type="button" className="Today" onClick={()=>this.handleCilck("TODAY")}>
-//         Today
-//         </button>
-//       </div>
-//       <div>
-//         <button type="button" className="Scheduled" onClick={()=>this.handleCilck("SCHEDULED")}>
-//           Scheduled
-//         </button>
-//       </div>
-//     </div>
-//     <div className="events col-md-10">
-//         <div className="row">
-//           {events}
-//         </div>
-//     </div>
-//   </div>
-// </div>

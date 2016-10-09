@@ -41,5 +41,3 @@ class LiveGame extends Component {
 }
 
 export default LiveGame
-
-// <p>Base: {this.calculateBase()}</p>
