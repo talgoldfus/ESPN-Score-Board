@@ -14,7 +14,7 @@ class ScheduledGame extends Component {
     const gameDate = moment(this.props.statusDetail).format('ddd - LT')
 
     return (
-      <div className="ScheduledGame">
+      <span className="ScheduledGame">
          <div className="statusDetail">
               <p>{gameDate}</p>
           </div>
@@ -28,7 +28,7 @@ class ScheduledGame extends Component {
               <p>{this.props.awayTeam.team.record.summary}</p>
             </div>
           </div>
-      </div>
+      </span>
     )
   }
 }

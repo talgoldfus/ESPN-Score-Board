@@ -1,3 +1,5 @@
+@import "./assets/base.css";
+
 body {
   margin: 0;
   padding: 0;
@@ -21,6 +23,10 @@ p{
   padding: 0;
   height: inherit;
 }
+.selectors div{
+  height: 31px;
+  border: 1px solid black;
+}
 
 .events{
   float: left;
@@ -28,20 +34,18 @@ p{
   background-color: aquamarine;
   padding: 0;
   height: inherit;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .LiveGame ,.FinalGame,.ScheduledGame{
   float: left;
-  clear: right;
-  width: 25%;
   height: inherit;
   border-left: solid 1px black;
 }
 
 .teams,.scores,.stats{
   float: left;
-  padding-right: 10px;
+  padding-right: 5px;
 }
 
 .gameStats,.statusDetail{

@@ -1,24 +1,13 @@
 import React, { Component } from 'react';
-
+import Base from './Base'
 class LiveGame extends Component {
 
   constructor(props){
     super(props)
     this.handleCilck = this.handleCilck.bind(this)
-    this.calculateBase = this.calculateBase.bind(this)
-
   }
 
   handleCilck(){
-  }
-
-  calculateBase(){
-    const {onFirst,onSecond,onThird}= this.props.situation
-    let occupiedBase = []
-    onFirst ==false ? occupiedBase.push("First") : null
-    onSecond ==false ? occupiedBase.push("Second") : null
-    onThird ==false ? occupiedBase.push("Third") : null
-    return occupiedBase.join(",")
   }
 
   render() {
@@ -38,8 +27,12 @@ class LiveGame extends Component {
               <p>{this.props.awayTeam.score}</p>
             </div>
             <div className="stats">
-              <p>Base: {this.calculateBase()}</p>
-              <p>{this.props.situation.outs} Outs</p>
+              <Base
+              outs={this.props.situation.outs}
+              first={this.props.situation.onFirst}
+              second={this.props.situation.onSecond}
+              third={this.props.situation.onThird}
+              />
             </div>
           </div>
       </div>
@@ -48,3 +41,5 @@ class LiveGame extends Component {
 }
 
 export default LiveGame
+
+// <p>Base: {this.calculateBase()}</p>
