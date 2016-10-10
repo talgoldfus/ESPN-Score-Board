@@ -126,11 +126,12 @@ p{
     height: 100%;
     cursor: hand;
     cursor: pointer;
-
 }
 
 .button:hover{
   color:#002e6d;
 }
 
-.button:focus {outline:0;}
+.button:focus{
+  outline:0;
+}
