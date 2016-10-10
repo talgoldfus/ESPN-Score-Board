@@ -1,18 +1,17 @@
 import React from 'react';
-import {Link} from 'react-router'
 
 const FinalGameLink = (props)=> {
     return (
       <div className="FinalGameLink">
         <div className="recap">
-          <a href={props.link.href}>
+          <a href={props.links.recap.href}>
             <p>Recap</p>
           </a>
         </div>
         <div className="fullFinalGameLink">
-          <Link to={`final/${props.gameID}`}>
-            <p>More Details</p>
-          </Link>
+          <a href={props.links.boxscore.href}>
+            <p>Box Score</p>
+          </a>
         </div>
       </div>
     );

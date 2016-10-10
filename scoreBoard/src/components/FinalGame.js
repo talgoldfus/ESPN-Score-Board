@@ -19,7 +19,7 @@ class FinalGame extends Component {
   }
 
   render() {
-    const summary = (<FinalGameLink link={this.props.links.web.recap} gameID={this.props.eventID} />)
+    const summary = (<FinalGameLink links={this.props.links.web} />)
     const details =
     (<div>
         <div className="statusDetail">

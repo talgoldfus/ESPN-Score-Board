@@ -2,10 +2,8 @@
 @import "./assets/FullLiveGameStats.css";
 @import './assets/fonts/fonts.css';
 @import './assets/LiveGameLink.css';
+@import './assets/FinalGameLink.css';
 @import './assets/ConversationLink.css';
-
-
-
 
 body {
   margin: 0;
@@ -50,7 +48,7 @@ p{
   display: inline-block;
   height: inherit;
   border-left: solid 1px black;
-  width:12%;
+  width:13%;
   overflow-y: hidden;
 
 }
