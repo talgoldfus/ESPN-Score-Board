@@ -24,16 +24,11 @@ class FullLiveGameContainer extends Component {
 
     return (
       <div className="mainContainer">
-          <span className="logo">
-            <img src={require('../assets/images/mlblogo.png')}/>
-          </span>
-          <span className="selectors">
-            <div>
-              <button type="button" className="close" onClick={()=>this.handleCilck()}>
-              All Games
-              </button>
-            </div>
-          </span>
+      <span className="selectors">
+          <button type="button" className="button close" onClick={()=>this.handleCilck()}>
+          GO BACK
+          </button>
+      </span>
           <span className="events">
                 <FullLiveGame
                   statusDetail={game.status.detail}
@@ -42,6 +37,9 @@ class FullLiveGameContainer extends Component {
                   situation={game.situation}
                   stats={game.stats}
                 />
+          </span>
+          <span className="logo">
+            <img src={require('../assets/images/mlblogo.png')} alt="MLB logo"/>
           </span>
       </div>
     );

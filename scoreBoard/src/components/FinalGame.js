@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FinalGameLink from './FinalGameLink'
+import classNames from 'classnames'
 
 class FinalGame extends Component {
 
@@ -19,6 +20,8 @@ class FinalGame extends Component {
   }
 
   render() {
+    const home = classNames({'winner': !this.props.homeTeam.isWinner})
+    const away = classNames({'winner': !this.props.awayTeam.isWinner})
     const summary = (<FinalGameLink links={this.props.links.web} />)
     const details =
     (<div>
@@ -27,12 +30,12 @@ class FinalGame extends Component {
        </div>
        <div className="gameStats">
          <div className="teams">
-           <p>{this.props.homeTeam.team.abbreviation}</p>
-           <p>{this.props.awayTeam.team.abbreviation}</p>
+           <p className={home}>{this.props.homeTeam.team.abbreviation}</p>
+           <p className={away}>{this.props.awayTeam.team.abbreviation}</p>
          </div>
          <div className="scores">
-           <p>{this.props.homeTeam.score}</p>
-           <p>{this.props.awayTeam.score}</p>
+           <p className={home}>{this.props.homeTeam.score}</p>
+           <p className={away}>{this.props.awayTeam.score}</p>
          </div>
        </div>
      </div>)

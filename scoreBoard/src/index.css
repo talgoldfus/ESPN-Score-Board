@@ -1,9 +1,9 @@
-@import "./assets/Base.css";
-@import "./assets/FullLiveGameStats.css";
+@import "./assets/css/Base.css";
+@import "./assets/css/FullLiveGameStats.css";
 @import './assets/fonts/fonts.css';
-@import './assets/LiveGameLink.css';
-@import './assets/FinalGameLink.css';
-@import './assets/ConversationLink.css';
+@import './assets/css/LiveGameLink.css';
+@import './assets/css/FinalGameLink.css';
+@import './assets/css/ConversationLink.css';
 
 body {
   margin: 0;
@@ -25,18 +25,18 @@ p{
 
 .selectors{
   float: left;
-  width: 10%;
+  width: 12%;
   background-color: #ed244f;
   padding: 0;
   height: inherit;
 }
 .selectors div{
-  height: 31px;
+  height: 33px;
 }
 
 .events{
   display: inline-block;
-  width: 76%;
+  width: 71%;
   padding: 0;
   height: 66px;
   white-space: nowrap;
@@ -47,8 +47,8 @@ p{
 .LiveGame ,.FinalGame,.ScheduledGame{
   display: inline-block;
   height: inherit;
-  border-left: solid 1px black;
-  width:13%;
+  border-right: solid 1px black;
+  width:13.5%;
   overflow-y: hidden;
 
 }
@@ -83,17 +83,18 @@ p{
   bottom: 7px;
 }
 
-
 .LiveGame .statusDetail p{
   color: red;
 }
 
 .logo{
-  float: left;
+  float: right;
   height: inherit;
-  width: 13.2%;
+  width: 17%;
+  background-color: #ed244f;
   overflow-y: hidden;
 }
+
 .logo>img{
   height: 66px;
 }
@@ -109,3 +110,27 @@ p{
   color: #b9b9b9;
   text-align: right;
 }
+
+.winner{
+  color: grey;
+}
+
+.button {
+    background-color: #ed244f;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    width: 100%;
+    height: 100%;
+    cursor: hand;
+    cursor: pointer;
+
+}
+
+.button:hover{
+  color:#002e6d;
+}
+
+.button:focus {outline:0;}

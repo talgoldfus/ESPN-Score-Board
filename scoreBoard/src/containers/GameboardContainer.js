@@ -60,23 +60,23 @@ class Gameboard extends Component {
 
     return (
       <div className="mainContainer">
-          <span className="logo">
-            <img src={require('../assets/images/mlblogo.png')}/>
-          </span>
           <span className="selectors">
             <div>
-              <button type="button" className="Today" onClick={()=>this.handleCilck("TODAY")}>
-              Today
+              <button type="button" className="button" onClick={()=>this.handleCilck("CURRENT")}>
+              LIVE
               </button>
             </div>
             <div>
-              <button type="button" className="Scheduled" onClick={()=>this.handleCilck("SCHEDULED")}>
-                Scheduled
+              <button type="button" className="button" onClick={()=>this.handleCilck("SCHEDULED")}>
+                SCHEDULED
               </button>
             </div>
           </span>
           <span className="events">
               {events}
+          </span>
+          <span className="logo">
+            <img src={require('../assets/images/mlblogo.png')} alt="MLB logo"/>
           </span>
       </div>
     );
