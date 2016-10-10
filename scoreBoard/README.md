@@ -51,3 +51,6 @@ B)Cd into the scoreBoard folder and run npm install ($ npm install).
 C)Once npm install has ended to run the tests simply type the npm test command in the console ($ npm test ).
 
 D)To see the Scoreboard start the npm server ($ npm start). If the browser hasn't opened automatically open your browser in http://localhost:3000/
+
+###Live Demo
+https://scoreboard-challenge.herokuapp.com/
