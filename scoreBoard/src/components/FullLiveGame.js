@@ -35,7 +35,7 @@ const FullLiveGame = (props)=> {
                    />
                  </div>
                  <div className="currentSituation">
-                   <p>{props.situation.lastAtBatResult}</p>
+                   <p>"{props.situation.lastAtBatResult}"</p>
                  </div>
                </div>
              </div>

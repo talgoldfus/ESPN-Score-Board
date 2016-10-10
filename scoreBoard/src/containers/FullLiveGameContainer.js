@@ -24,6 +24,9 @@ class FullLiveGameContainer extends Component {
 
     return (
       <div className="mainContainer">
+          <span className="logo">
+            <img src={require('../assets/images/mlblogo.png')}/>
+          </span>
           <span className="selectors">
             <div>
               <button type="button" className="close" onClick={()=>this.handleCilck()}>

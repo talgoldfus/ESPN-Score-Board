@@ -6,7 +6,6 @@ import FinalGame from '../components/FinalGame'
 import ScheduledGame from '../components/ScheduledGame'
 
 
-
 class Gameboard extends Component {
 
   constructor(props){
@@ -61,6 +60,9 @@ class Gameboard extends Component {
 
     return (
       <div className="mainContainer">
+          <span className="logo">
+            <img src={require('../assets/images/mlblogo.png')}/>
+          </span>
           <span className="selectors">
             <div>
               <button type="button" className="Today" onClick={()=>this.handleCilck("TODAY")}>
@@ -74,7 +76,7 @@ class Gameboard extends Component {
             </div>
           </span>
           <span className="events">
-                {events}
+              {events}
           </span>
       </div>
     );
