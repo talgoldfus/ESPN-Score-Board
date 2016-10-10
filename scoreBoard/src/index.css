@@ -1,6 +1,10 @@
-@import "./assets/base.css";
-@import "./assets/fullLiveGameStats.css";
+@import "./assets/Base.css";
+@import "./assets/FullLiveGameStats.css";
 @import './assets/fonts/fonts.css';
+@import './assets/LiveGameLink.css';
+@import './assets/ConversationLink.css';
+
+
 
 
 body {

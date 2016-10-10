@@ -1,5 +1,21 @@
-.conversationLink{
-  display: inline-block;
-  margin-bottom: 4px;
-      float: left;
+
+.ScheduledGame>.conversationLink{
+    width: 89.45px;
+    height: 66px;
+    display: inline-block;
+    background-color: #193f73;
+}
+
+.ScheduledGame>.conversationLink p{
+    margin-top: 27px;
+    color: white;
+}
+
+.conversationLink p:hover{
+  color: #ed244f;
+}
+
+.conversationLink a{
+  text-decoration: none;
+  text-align: center;
 }
