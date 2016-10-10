@@ -26,7 +26,7 @@ I decided to try and build a dynamic solution using React / Redux framework in o
 
 ### Live games show dynamically the current score , current inning, which based are currently occupied and count outs.
 
-### On mouse hover the live game shows a link to the Play By Play ESPN page as well as more details feature which displays all the above information with the addition of live commentators feed.
+### On mouse hover the live game shows a link to the Play By Play ESPN page as well as more details feature which displays all the above information with the addition of the teams records pitcher and batter (changes dynamically upon new information from the server) and live commentators feed.
 
 ###Final games show the final score and highlight the winning team.
 
