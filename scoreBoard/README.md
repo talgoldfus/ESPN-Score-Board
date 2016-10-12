@@ -1,4 +1,4 @@
-# ESPN Score Board Challenge :
+# ESPN Scoreboard Challenge :
 
 The objective of the challenge is to create a HTML5 scoreboard component using a given JSON data file.
 
