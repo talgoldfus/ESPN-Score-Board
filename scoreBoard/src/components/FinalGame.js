@@ -20,8 +20,8 @@ class FinalGame extends Component {
   }
 
   render() {
-    const home = classNames({'winner': !this.props.homeTeam.isWinner})
-    const away = classNames({'winner': !this.props.awayTeam.isWinner})
+    const home = classNames({'looser': !this.props.homeTeam.isWinner})
+    const away = classNames({'looser': !this.props.awayTeam.isWinner})
     const summary = (<FinalGameLink links={this.props.links.web} />)
     const details =
     (<div>
